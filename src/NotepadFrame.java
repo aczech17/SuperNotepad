@@ -36,8 +36,12 @@ public class NotepadFrame extends JFrame
         JButton saveButton = new JButton("Zapisz");
         saveButton.addActionListener(new SaveAction(textArea, saveButton));
 
+        JButton openButton = new JButton("Otwórz");
+        openButton.addActionListener(new OpenAction(textArea, openButton));
+
         add(saveButton);
-        add ( textPanel );
+        add(openButton);
+        add(textPanel);
         pack ();
         setLocationRelativeTo ( null );
         setVisible ( true );
